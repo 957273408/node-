@@ -20,7 +20,9 @@
   "homepage": "https://github.com/957273408/node-#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "captchapng": "0.0.1",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "mongodb": "^3.1.12"
   }
 }

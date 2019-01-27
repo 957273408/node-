@@ -43,17 +43,18 @@
     function register() {
         //1.获取到用户输入的信息
         const username = $("#usernameId").val()
-        const password = $("#passwordId").val() 
+        const password = $.md5($("#passwordId").val()+'!@#ZZZ-_-') 
         //2.发送请求给服务器
         $.post("/account/register", {
             username,
             password
         }, function (result) {
-            if (result.status !== 0) {
-                alert(result.message)
+            if (result.state != 1) {
+                alert(result.massage)
             } else { //跳转登录页面
                 window.location.href = '/account/login'
             }
+            console.log(result);
         });
     }
 </script>
